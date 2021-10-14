@@ -13,7 +13,7 @@ def get_townhall_email(mysite)
     
     mail_string  = page.xpath("/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]")
     puts mail_string.text
-    return mail_string
+    return mail_string.text
 end
 
 def get_townhall_urls
@@ -58,8 +58,8 @@ ville = []
   end
 
 def perform
-  # site= "https://www.annuaire-des-mairies.com/95/avernes.html"
-  # mymail = get_townhall_email(site)
+  site= "https://www.annuaire-des-mairies.com/95/avernes.html"
+  mymail = get_townhall_email(site)
   # #binding.pry # On lance PRY au milieu de la méthode
   # puts "voici : #{mymail} "
 
